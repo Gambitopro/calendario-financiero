@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calendario Financiero - Jorge</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #e6f2ff;
+            color: #222;
+        }
+        .container {
+            width: 100%;
+            padding: 30px;
+            box-sizing: border-box;
+            background: #ffffff;
+            max-width: 100%;
+        }
+        h1 {
+            text-align: center;
+            color: #002244;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .summary, .events, .daily-budget {
+            background: #f9f9f9;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .summary h2, .events h2, .daily-budget h2 {
+            color: #003366;
+            margin-top: 0;
+        }
+        .event {
+            border-left: 5px solid #003366;
+            padding-left: 15px;
+            margin-bottom: 15px;
+        }
+        .alert {
+            background: #ffe6e6;
+            color: #a60000;
+            padding: 15px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Calendario Financiero - Jorge</h1>
+
+        <div class="summary">
+            <h2>Resumen General</h2>
+            <p><strong>Cuenta BBVA:</strong> $504.832,41</p>
+            <p><strong>Mercado Pago:</strong> $10.094,55</p>
+            <p><strong>Efectivo en bolsillo:</strong> $32.000,00</p>
+            <p><strong>Total disponible hoy:</strong> <strong>$546.926,96</strong></p>
+            <p><strong>Total de compromisos:</strong> $560.000,00</p>
+            <p><strong>Diferencia:</strong> <span style="color:red;">-13.073,04</span></p>
+            <p>Este monto se puede cubrir con lo generado hasta el domingo y cobrado el jueves 15/05.</p>
+        </div>
+
+        <div class="events">
+            <h2>Fechas Importantes</h2>
+            <div class="event">
+                <strong>Sábado 10/05:</strong> Pago de alquiler ($160.000)
+            </div>
+            <div class="event">
+                <strong>Semana próxima:</strong> Anticipo de moto ($400.000)
+            </div>
+            <div class="event">
+                <strong>Jueves 15/05:</strong> Cobro de ganancias generadas esta semana
+            </div>
+        </div>
+
+        <div class="daily-budget">
+            <h2>Presupuesto Diario</h2>
+            <p>Podés gastar hasta <strong>$3,708.10</strong> por día (hasta el domingo 11/05)</p>
+            <p>Suponiendo que generás al menos $70,000.00 esta semana y lo cobrás el jueves 15/05.</p>
+        </div>
+
+        <div class="alert" id="alerta">
+            ¡Atención! Necesitás reunir $560.000 antes del jueves para cubrir todos tus compromisos.
+        </div>
+    </div>
+
+    <script>
+        const hoy = new Date().toISOString().split('T')[0];
+        if (hoy === "2025-05-10") {
+            alert("¡Hoy vence el alquiler! No olvides pagar los $160.000");
+        } else if (hoy === "2025-05-15") {
+            alert("Hoy se acredita lo generado en PedidosYa.");
+        }
+    </script>
+</body>
+</html>
